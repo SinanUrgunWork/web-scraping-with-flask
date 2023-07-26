@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KitapYurdu Page</title>
+</head>
+<body>
+    <h1>Kitap Yurdu Data</h1>
+    <table border="1">
+        <tr>
+            <th>Writer</th>
+            <th>Publisher</th>
+            <th>Name</th>
+            <th>Price(TL)</th>
+        </tr>
+        {% for item in data %}
+        <tr>
+            <td>{{ item.writer }}</td>
+            <td>{{ item.publisher }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item['price(TL)'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/"><button>Main</button></a>
+</body>
+</html>
